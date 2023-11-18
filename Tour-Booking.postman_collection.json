@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "e2aa5c3b-784e-4ec0-908a-64a4b9ff7a0d",
+		"name": "Tour-Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30392515"
+	},
+	"item": [
+		{
+			"name": "Tour",
+			"item": [
+				{
+					"name": "register Tour",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Westminister Bridge\",\r\n    \"city\":\"London\",\r\n    \"address\":\"SomeWhere in London\",\r\n    \"distance\":300,\r\n    \"price\":99,\r\n    \"maxGroupSize\":10,\r\n    \"desc\":\"This is Description\",\r\n    \"reviews\":[],\r\n    \"photo\":\"/tour-images/tour-img01.jpg\",\r\n    \"featured\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/tour/",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tour",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tour/65435ea8007ce99c6b2f6781",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"65435ea8007ce99c6b2f6781"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all tour",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tour",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Tour",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Bangkok Thailand\",\r\n    \"city\":\"thailand\",\r\n    \"address\":\"SomeWhere in Thailand\",\r\n    \"distance\":300,\r\n    \"price\":99,\r\n    \"maxGroupSize\":10,\r\n    \"desc\":\"This is Description\",\r\n    \"reviews\":[],\r\n    \"photo\":\"/tour-images/tour-img01.jpg\",\r\n    \"featured\":true\r\n}\r\n\r\n// {\r\n//     \"title\":\"Westminister Bridge\",\r\n//     \"city\":\"London\",\r\n//     \"address\":\"SomeWhere in London\",\r\n//     \"distance\":300,\r\n//     \"price\":99,\r\n//     \"maxGroupSize\":10,\r\n//     \"desc\":\"This is Description\",\r\n//     \"reviews\":[],\r\n//     \"photo\":\"/tour-images/tour-img01.jpg\",\r\n//     \"featured\":true\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/tour/6543845f4e71c012445e6253",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"6543845f4e71c012445e6253"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a Tour",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tour/65448707745a29fccd0b1e97",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"65448707745a29fccd0b1e97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tour by search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tour/search/getTourBySearch?city=bali&distance=300&maxGroupSize=8",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"search",
+								"getTourBySearch"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "bali"
+								},
+								{
+									"key": "distance",
+									"value": "300"
+								},
+								{
+									"key": "maxGroupSize",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get featured tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tour/search/getFeaturedTours",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"search",
+								"getFeaturedTours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tour count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tour/search/getTourCount",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"search",
+								"getTourCount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/user/65435ea8007ce99c6b2f6781",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"65435ea8007ce99c6b2f6781"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Bangkok Thailand\",\r\n    \"city\":\"thailand\",\r\n    \"address\":\"SomeWhere in Thailand\",\r\n    \"distance\":300,\r\n    \"price\":99,\r\n    \"maxGroupSize\":10,\r\n    \"desc\":\"This is Description\",\r\n    \"reviews\":[],\r\n    \"photo\":\"/tour-images/tour-img01.jpg\",\r\n    \"featured\":true\r\n}\r\n\r\n// {\r\n//     \"title\":\"Westminister Bridge\",\r\n//     \"city\":\"London\",\r\n//     \"address\":\"SomeWhere in London\",\r\n//     \"distance\":300,\r\n//     \"price\":99,\r\n//     \"maxGroupSize\":10,\r\n//     \"desc\":\"This is Description\",\r\n//     \"reviews\":[],\r\n//     \"photo\":\"/tour-images/tour-img01.jpg\",\r\n//     \"featured\":true\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/tour/6543845f4e71c012445e6253",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tour",
+								"6543845f4e71c012445e6253"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/user/6544a18702bc98c05335f07e",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"user",
+								"6544a18702bc98c05335f07e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"username\":\"ashish\",\r\n//     \"email\":\"ashish@gmail.com\",\r\n//     \"password\":\"12345\"\r\n// }\r\n\r\n{\r\n    \"username\":\"user\",\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //admin\r\n    // \"email\":\"user@gmail.com\",\r\n    // \"password\":\"12345\"\r\n    \"email\":\"ashish@gmail.com\",\r\n    \"password\":\"12345\"\r\n    // \"email\":\"akshay@gmail.com\",\r\n    // \"password\":\"12345\"\r\n    // \"email\":\"shourya@gmail.com\",\r\n    // \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "add review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Suraj\",\r\n    \"reviewText\":\"great place\",\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/review/6544a18702bc98c05335f07e/65448707745a29fccd0b1e9a",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"review",
+								"6544a18702bc98c05335f07e",
+								"65448707745a29fccd0b1e9a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "add booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tourName\":\"Jaflong, sylhet\",\r\n    \"fullName\":\"Ashish Chandel\",\r\n    \"guestSize\":8,\r\n    \"phone\":76668249437,\r\n    \"bookAt\":\"2023-11-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/booking/6544a18702bc98c05335f07e",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"booking",
+								"6544a18702bc98c05335f07e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/booking/6548b6f34ba9ea82c060899b",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"booking",
+								"6548b6f34ba9ea82c060899b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All booking",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
